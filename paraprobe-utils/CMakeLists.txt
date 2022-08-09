@@ -62,7 +62,7 @@ if(EMPLOY_PARALLELISM_MPI)
 endif()
 
 #specific paths of dependencies for this tool
-set(MYTOOLSRCPATH "paraprobe-toolbox/code/paraprobe-utils/src/cxx")
+set(MYTOOLSRCPATH "../../paraprobe-toolbox/code/paraprobe-utils/src/cxx")
 set(MYVOROSRCPATH "voro++/voro/src")
 
 add_library(paraprobe-utils OBJECT
