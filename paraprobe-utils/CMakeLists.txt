@@ -62,7 +62,7 @@ endif()
 #specific paths of dependencies for this tool
 set(MYTOOLSRCPATH "../../paraprobe-toolbox/code/paraprobe-utils/src/cxx")
 set(MYEXTPATH "../../paraprobe-toolbox/code/thirdparty/mandatory/hdf5cxxwrapper/src/cxx")
-set(MYVOROSRCPATH "voro++/voro/src")
+set(MYVOROSRCPATH "../../voro++/src")
 
 add_library(paraprobe-utils OBJECT
 	${MYEXTPATH}/hdf5_wrapper_cxx_structs.cpp
