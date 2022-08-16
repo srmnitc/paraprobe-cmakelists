@@ -32,10 +32,8 @@ include_directories("${CONDA_PREFIX}/include/voro++")
 #connect with ExternalLibraries.cmake via MYCGALHOME
 find_package(CGAL QUIET)
 find_package(Eigen)
-
-
-link_directories(${Boost_LIBRARY_DIR})
 find_package(Boost)
+link_directories(${Boost_LIBRARY_DIR})
 
 #include_directories("${MYVOROXXPATH}/src")
 
@@ -67,8 +65,8 @@ set(MYEXTPATH "../../paraprobe-toolbox/code/thirdparty/mandatory/hdf5cxxwrapper/
 set(MYVOROSRCPATH "voro++/voro/src")
 
 add_library(paraprobe-utils OBJECT
-	${MYEXTPATH}/hdf5_wrapper_cxx_structs.cpp
-	${MYEXTPATH}/hdf5_wrapper_cxx_sequ_core.cpp
+	#${MYEXTPATH}/hdf5_wrapper_cxx_structs.cpp
+	#${MYEXTPATH}/hdf5_wrapper_cxx_sequ_core.cpp
 	${MYTOOLSRCPATH}/PARAPROBE_CoordinateSystem.cpp
 	${MYTOOLSRCPATH}/CONFIG_Shared.cpp
 	${MYTOOLSRCPATH}/PARAPROBE_CiteMe.cpp
