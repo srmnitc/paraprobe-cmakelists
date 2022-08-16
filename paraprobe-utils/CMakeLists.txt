@@ -26,7 +26,7 @@ endif()
 
 set(MYHDFLINKFLAGS "-L${CONDA_PREFIX}/lib/ ${CONDA_PREFIX}/lib/libhdf5_hl.so ${CONDA_PREFIX}/lib/libhdf5.so ${CONDA_PREFIX}/lib/libz.a ${CONDA_PREFIX}/lib/libsz.a ${CONDA_PREFIX}/lib/libaec.a -ldl")
 
-include_directories("${CONDA_PREFIX}/include/voro++")
+include_directories("${CONDA_PREFIX}/include")
 
 #GMP and MPFR is included and found alongside the CGAL library
 #connect with ExternalLibraries.cmake via MYCGALHOME
@@ -61,12 +61,14 @@ endif()
 
 #specific paths of dependencies for this tool
 set(MYTOOLSRCPATH "../../paraprobe-toolbox/code/paraprobe-utils/src/cxx")
-set(MYEXTPATH "../../paraprobe-toolbox/code/thirdparty/mandatory/hdf5cxxwrapper/src/cxx")
+#set(MYEXTPATH "../../paraprobe-toolbox/code/thirdparty/mandatory/hdf5cxxwrapper/src/cxx")
 set(MYVOROSRCPATH "../../voro++/src")
 
 add_library(paraprobe-utils OBJECT
-	${MYEXTPATH}/hdf5_wrapper_cxx_structs.cpp
-	${MYEXTPATH}/hdf5_wrapper_cxx_sequ_core.cpp
+	#${MYEXTPATH}/hdf5_wrapper_cxx_structs.cpp
+	#${MYEXTPATH}/hdf5_wrapper_cxx_sequ_core.cpp
+	${MYTOOLSRCPATH}/hdf5_wrapper_cxx_structs.cpp
+	${MYTOOLSRCPATH}/hdf5_wrapper_cxx_sequ_core.cpp
 	${MYTOOLSRCPATH}/PARAPROBE_CoordinateSystem.cpp
 	${MYTOOLSRCPATH}/CONFIG_Shared.cpp
 	${MYTOOLSRCPATH}/PARAPROBE_CiteMe.cpp
