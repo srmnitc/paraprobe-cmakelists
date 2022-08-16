@@ -63,11 +63,12 @@ endif()
 
 #specific paths of dependencies for this tool
 set(MYTOOLSRCPATH "../../paraprobe-toolbox/code/paraprobe-utils/src/cxx")
+set(MYEXTPATH "../../paraprobe-toolbox/code/thirdparty/mandatory/hdf5cxxwrapper/src/cxx")
 set(MYVOROSRCPATH "voro++/voro/src")
 
 add_library(paraprobe-utils OBJECT
-	../../paraprobe-toolbox/code/thirdparty/mandatory/hdf5cxxwrapper/src/cxx/hdf5_wrapper_cxx_structs.cpp
-	../../paraprobe-toolbox/code/thirdparty/mandatory/hdf5cxxwrapper/src/cxx/hdf5_wrapper_cxx_sequ_core.cpp
+	${MYEXTPATH}/hdf5_wrapper_cxx_structs.cpp
+	${MYEXTPATH}/hdf5_wrapper_cxx_sequ_core.cpp
 	${MYTOOLSRCPATH}/PARAPROBE_CoordinateSystem.cpp
 	${MYTOOLSRCPATH}/CONFIG_Shared.cpp
 	${MYTOOLSRCPATH}/PARAPROBE_CiteMe.cpp
